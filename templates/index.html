@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div>
+        <h2 style="text-align: center">Welcome To Product Reviews World !</h2>
+    </div>
+    <div class="form">
+        
+        <form action="/review" method="POST">
+            <input type="text" name="content" id="content" class="search-input" placeholder="Enter Your Product Name">
+            <input type="submit" class="search-button" value="Search">
+        </form>
+    </div>
+</div>
+{% endblock %}
